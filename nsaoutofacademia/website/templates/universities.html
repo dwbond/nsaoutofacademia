@@ -45,7 +45,7 @@ NSA Out of Academia
             {{ university.designation }}
           </div>
           <div class="col-md-4">
-            <strong>{{ university.isPublic }}</strong>
+            <strong><a href="#loadelectedofficialcontactform" data-toggle="tooltip" title="Contact Your Elected Officials!">{{ university.isPublic }}</a></strong>
           </div>
         </div>
         {% for person in university.people.all %}
