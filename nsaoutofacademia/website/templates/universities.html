@@ -24,8 +24,10 @@ NSA Out of Academia
 
         <div class="row">
           <div class="col-md-12">
-            {{ university.centerName }}
-            {{ university.centerEmail }}
+            <strong>{{ university.centerName }}</strong>
+          </div>
+          <div class="col-md-12">
+            <em>{{ university.centerEmail }}</em>
           </div>
         </div>
         <!-- { % for person in university.people % } -->
@@ -33,7 +35,7 @@ NSA Out of Academia
             <div class="col-md-6 well">
               <p>{{ person.titleName }}</p>
               <p>{{ person.name }}</p>
-              <p>{{ person.email }}</p>
+              <p><em>{{ person.email }}</em></p>
             </div>
           </div>
         <!-- { % empty % } -->
