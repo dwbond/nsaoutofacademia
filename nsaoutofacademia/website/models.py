@@ -5,9 +5,15 @@ class Person(models.Model):
     titleName = models.CharField(max_length = 150)
     email = models.EmailField()
 
+    class Meta:
+        verbose_name_plural = "people"
+
 class University(models.Model):
     universityName = models.CharField(max_length = 150)
     centerName = models.CharField(max_length = 150)
     centerEmail = models.EmailField()
     page = models.URLField()
-    people = models.ManyToManyField('Person')  
+    people = models.ManyToManyField('Person')
+
+    class Meta:
+        verbose_name_plural = "universities"
