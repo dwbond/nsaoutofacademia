@@ -3,12 +3,11 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    
-from nsaoutofacademia.views import about
+from nsaoutofacademia.views import index, about
     
 urlpatterns = patterns('',
     # base urls
+    url(r'^$', index, name = 'index'),
     url(r'^about/$', about, name = 'about'),
 
     # app sub-urls
