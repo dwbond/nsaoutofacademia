@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^about/$', about, name = 'about'),
 
     # app sub-urls
-    url(r'nsaout/', include('website.urls')),
+    url(r'universities/$', include('website.urls')),
 
     # admin interface
     url(r'^admin/', include(admin.site.urls)),

@@ -1,6 +1,6 @@
 from django.conf.urls import pattern, include, url
-from website.views import index
+from website.views import universities
 
 urlpatterns = patterns('',
-    url(r'^$', index, name = 'index'),
+    url(r'^$', universities, name = 'universities'),
 )
