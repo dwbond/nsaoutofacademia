@@ -10,14 +10,40 @@ NSA Out of Academia
   <div class="row">
     <div class="col-md-12 text-center">
       <h1><strong>NSA OUT OF ACADEMIA</strong></h1>
-      <p class="lead">Peacefully opposing the NSA on our campuses.</p>
+      <p class="lead">Contact information for NSA university partners.</p>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-12">
-  
+  <div class="col-md-6">
+    {% for university in universities %}
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>{{ university.universityName }}</strong></div>
+      <div class="panel-body">
+
+        <div class="row">
+          <div class="col-md-12">
+            {{ university.centerName }}
+            {{ university.centerEmail }}
+          </div>
+        </div>
+        <!-- { % for person in university.people % } -->
+          <div class="row">
+            <div class="col-md-6 well">
+              <p>{{ person.titleName }}</p>
+              <p>{{ person.name }}</p>
+              <p>{{ person.email }}</p>
+            </div>
+          </div>
+        <!-- { % empty % } -->
+          <!-- <p>There are no people in the database.</p> -->
+        <!-- { % endfor % } -->
+      </div>
+    </div>
+    {% empty %}
+      <p>There are no universities in the database.</p>
+    {% endfor %}
   </div>
 </div>
 
