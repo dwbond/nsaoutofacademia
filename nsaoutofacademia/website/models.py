@@ -13,6 +13,8 @@ class University(models.Model):
     centerName = models.CharField(max_length = 150)
     centerEmail = models.EmailField()
     page = models.URLField()
+    designation = models.CharField(max_length = 150)
+    isPublic = models.BooleanField()
     people = models.ManyToManyField('Person')
 
     class Meta:
