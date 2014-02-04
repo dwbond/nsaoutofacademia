@@ -1,4 +1,4 @@
-from django.conf.urls import pattern, include, url
+from django.conf.urls import patterns, include, url
 from website.views import universities
 
 urlpatterns = patterns('',
