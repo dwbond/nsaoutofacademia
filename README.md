@@ -22,7 +22,6 @@
 * set up cloudflare free level... cdn? scraping protection?
 * robots.txt
 * Piwik
-* have dbondcc up
 
 ### Pipe Dreams
 * Email directly from the page with modals
